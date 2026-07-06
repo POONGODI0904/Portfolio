@@ -1,0 +1,153 @@
+/* Skills Section Styling for Portfolio Website */
+
+.skills-section {
+    min-height: 100vh;
+    padding: 120px 9% 40px;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-content 1.5s linear forwards;
+    animation-delay: 1.2s;
+}
+
+.skills-title {
+    text-align: center;
+    font-size: 55px;
+    color: #7cf03d;
+    margin-bottom: 50px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.skills-box {
+    flex: 1 1 45%;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.4s ease;
+}
+
+.skills-box:hover {
+    transform: translateY(-5px);
+    border-color: #7cf03d;
+    box-shadow: 0 15px 35px rgba(124, 240, 61, 0.15);
+}
+
+.skills-box h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #7cf03d;
+    display: inline-block;
+    padding-bottom: 5px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.radial-bars {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+}
+
+/* Center items in the second skills box */
+.skills-box:nth-child(2) .radial-bars {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.radial-bar {
+    position: relative;
+    width: 150px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.radial-bar svg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(-90deg);
+    width: 130px;
+    height: 130px;
+}
+
+.radial-bar .progress-bar {
+    stroke-width: 10;
+    stroke: #1f242d;
+    fill: transparent;
+}
+
+.radial-bar .path {
+    stroke-width: 10;
+    stroke: #7cf03d;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1.5s linear forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes animate-bar {
+    100% {
+        stroke-dashoffset: var(--dashoffset);
+    }
+}
+
+.radial-bar .percentage {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.radial-bar .text {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 15px;
+    font-weight: 600;
+    color: #7cf03d;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .skills-container {
+        flex-direction: column;
+    }
+    .skills-box {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .radial-bars {
+        grid-template-columns: 1fr;
+    }
+    .skills-box:nth-child(2) .radial-bars {
+        flex-direction: column;
+        align-items: center;
+    }
+}

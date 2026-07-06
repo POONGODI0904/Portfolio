@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Personal Portfolio website</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="contact.css?v=1">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <a href="index.html" class="logo">Portfolio.</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="certificates.html">Certificates</a></li>
+            <li class="active"><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="bars-animation">
+        <div class="bar" style="--i:6;"></div>
+        <div class="bar" style="--i:5;"></div>
+        <div class="bar" style="--i:4;"></div>
+        <div class="bar" style="--i:3;"></div>
+        <div class="bar" style="--i:2;"></div>
+        <div class="bar" style="--i:1;"></div>
+    </div>
+
+    <section class="contact-section">
+        <h1 class="contact-title">Contact Me</h1>
+        
+        <div class="contact-container">
+            
+            <!-- Contact Info Card (NAME, MOBILE NO, EMAIL, ADDRESS) -->
+            <div class="contact-info">
+                <div class="contact-card-box">
+                    <h2>Get In Touch</h2>
+                    <div class="contact-details">
+                        
+                        <!-- Name -->
+                        <div class="contact-detail-item">
+                            <i class='bx bx-user'></i>
+                            <div class="contact-detail-text">
+                                <h3>Name</h3>
+                                <p>Poongodi S</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Mobile No -->
+                        <div class="contact-detail-item">
+                            <i class='bx bx-phone'></i>
+                            <div class="contact-detail-text">
+                                <h3>Mobile No</h3>
+                                <p>+91 98765 43210</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="contact-detail-item">
+                            <i class='bx bx-envelope'></i>
+                            <div class="contact-detail-text">
+                                <h3>Email</h3>
+                                <p>poongodi@example.com</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Address -->
+                        <div class="contact-detail-item">
+                            <i class='bx bx-map'></i>
+                            <div class="contact-detail-text">
+                                <h3>Address</h3>
+                                <p>Tamil Nadu, India</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Contact Form -->
+            <div class="contact-form-box">
+                <h2>Send <span>Message</span></h2>
+                <form action="#" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+                    
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" placeholder=" " required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="tel" class="form-control" id="mobile" placeholder=" " required>
+                        <label for="mobile">Your Mobile No</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email" placeholder=" " required>
+                        <label for="email">Your Email Address</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea class="form-control" id="address" placeholder=" " required></textarea>
+                        <label for="address">Your Message / Address</label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+    
+</body>
+</html>
